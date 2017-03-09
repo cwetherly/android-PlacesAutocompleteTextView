@@ -30,7 +30,7 @@ import com.seatgeek.placesautocomplete.network.PlacesHttpClientResolver;
 import java.lang.reflect.Constructor;
 import java.lang.reflect.InvocationTargetException;
 
-public class PlacesAutocompleteTextView extends AutoCompleteTextView {
+public class PlacesAutocompleteTextView extends android.support.v7.widget.AppCompatAutoCompleteTextView {
 
     public static final boolean DEBUG = true;
 
@@ -88,16 +88,6 @@ public class PlacesAutocompleteTextView extends AutoCompleteTextView {
         super(context, attrs, defAttr);
 
         init(context, attrs, defAttr, R.style.PACV_Widget_PlacesAutoCompleteTextView, null, context.getString(R.string.pacv_default_history_file_name));
-    }
-
-    /**
-     * Constructor for layout inflation
-     */
-    @TargetApi(Build.VERSION_CODES.LOLLIPOP)
-    public PlacesAutocompleteTextView(final Context context, final AttributeSet attrs, final int defStyleAttr, final int defStyleRes) {
-        super(context, attrs, defStyleAttr, defStyleRes);
-
-        init(context, attrs, defStyleAttr, defStyleRes, null, context.getString(R.string.pacv_default_history_file_name));
     }
 
     // perform basic initialization of the view by fetching layout attributes and creating the api, etc.

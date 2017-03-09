@@ -4,7 +4,7 @@ buildscript {
     }
 
     dependencies {
-        classpath "com.android.tools.build:gradle:${ANDROID_PLUGIN_VERSION}"
+        classpath 'com.android.tools.build:gradle:2.3.0'
         classpath 'com.bmuschko:gradle-nexus-plugin:2.3.1'
     }
 }
@@ -36,10 +36,12 @@ android {
     lintOptions {
         abortOnError false
     }
+    buildToolsVersion '25.0.1'
 }
 
 dependencies {
     compile "com.android.support:support-v4:${SUPPORT_LIBRARY_VERSION}"
+    compile "com.android.support:appcompat-v7:${SUPPORT_LIBRARY_VERSION}"
     provided 'com.google.code.gson:gson:2.3.1'
     provided 'com.squareup.okhttp:okhttp:2.2.0'
     testCompile 'junit:junit:4.12'
